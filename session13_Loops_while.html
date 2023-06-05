@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp While</title>
+</head>
+
+<body>
+    <script>
+        /*
+            syntax: while(expression){
+                Block statements;
+            }
+            Lưu ý:  1. Vòng while được sử dụng khi không biết trước số lần lặp
+                    2. Vòng lặp vô hạn (điều kiện luôn đúng)
+        */
+        // Nhập vào 1 số, in ra các số từ 1 đến nó
+        let number = Number(prompt("Nhập vào một số"));
+        let a = 1;
+        // Vòng lặp vô hạn
+        // number = 100
+        // while (a <= number) {
+        //     console.log(a);
+        // }
+
+        while (a <= number) {
+            console.log(a);
+            a++;
+        }
+        // Bài tập: Nhập vào một giá trị thỏa mãn là một số và có giá trị từ 0 - 10
+        /*
+            1. Tạo ra 1 vòng lặp vô hạn đến khi nào nhập đúng yêu cầu thì thôi
+            2. Sử dụng break để thoát khỏi vòng lặp
+            3. Khi nhập giá trị không phải là số -> chuyển sang số -> NaN
+            4. isNaN(number): kiểm tra số đó có phải là số hay không? true -> không phải là số, false-> số
+        */
+
+
+        while (true) {
+            let numberInput = Number(prompt("Nhập vào một số nguyên từ bàn phím"));
+
+            if (!isNaN(numberInput)) {
+                if (numberInput >= 0 && numberInput <= 10) {
+                    break;
+                } else {
+                    alert("Số vừa nhập có giá trị ngoài 0-10");
+                }
+            } else {
+                alert("Đây không phải là một số");
+            }
+        }
+        // Bài tập 2: Nhập và in ra tuổi sinh viên, yêu cầu tuổi phải là một số có gái trị >=18
+    </script>
+</body>
+
+</html>

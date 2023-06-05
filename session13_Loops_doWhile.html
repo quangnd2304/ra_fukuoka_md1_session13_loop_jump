@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp do...while</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Syntax:
+                do{
+                    block statements;
+                }while(expressionCondition)
+                Lưu ý:
+                    1. Được sử dụng khi chưa biết trước số lần lặp
+                    2. Được sử dụng khi bắt buộc phải chạy ít nhất 1 lần lặp
+        */
+        // Nhập vào 1 số (>=3), in ra các số từ 3 - 10
+        let a = 3;
+        do {
+            console.log(a);
+            a++;
+        } while (a <= 10);
+        // Nhập và in ra mã sinh viên thỏa mãn mã sinh viên phải gồm 5 ký tự và bắt đầu là ký tự S
+        // Gợi ý:
+        /*
+            1. str.length: trả ra số ký tự (độ dài) của chuỗi
+            2. str.startWith("S"): true -> chuỗi bắt đầu là S, false -> Chuỗi không bắt đầu là S
+        */
+        let studentId;
+        do {
+            studentId = prompt("Nhập vào mã sinh viên");
+            if (studentId.length == 5 && studentId.startsWith("S")) {
+                break;
+            } else {
+                alert("Mã sinh viên phải gồm 5 ký tự và bắt đầu là S, vui lòng nhập lại");
+            }
+        } while (true);
+        alert("Mã sinh viên là " + studentId);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp for</title>
+</head>
+
+<body>
+    <script>
+        /*
+            syntax:
+                for(init variable controls;expression;ASC/DESC){
+                    Block;
+                }
+            Lưu ý: Vòng for được sử dụng khi biết trước số lần lặp
+        */
+        //In ra 10 số nguyên đầu tiên từ 1
+        for (let i = 1; i <= 10; i++) {
+            console.log("i--->", i);
+        }
+        // In ra giá trị trung bình trong khoảng từ 0 - 10, ứng dụng vòng for
+        let i, j;
+        for (i = 0, j = 10; i < j; i++, j--) {
+            console.log("Giá trị i=" + i, " - j=", j);
+        }
+        console.log("Giá trị trung bình trong khoảng 0-10 là: ", i);
+        // Bài tập 1 - for: In ra tất cả các số lẻ và chia hết cho 3 trong khoảng từ 1 -100
+        console.log("Các số lẻ và chia hết cho 3 trong khoảng 1-100:");
+        for (let index = 1; index < 100; index++) {
+            if (index % 2 == 1 && index % 3 == 0) {
+                console.log(index);
+            }
+
+        }
+        // Bài tập 2 - for: Chỉ sử dụng vòng lặp for, không sử dụng if - in ra các số chia hết cho 3 từ 3-100
+        // Gợi ý nhỏ: Tăng biến điều khiển mỗi vòng lên 3 đơn vị bắt đầu từ 3
+        console.log("Các số chia hết cho 3 là: ");
+        for (let index = 3; index < 100; index += 3) {
+            console.log(index);
+        }
+        // Bài tập 3: In ra các số chẵn từ 1 - 100, sắp xếp theo giá trị giảm dần
+        console.log("Các số chẵn giảm dần từ 1-100 là: ");
+        for (let index = 100; index >= 1; index--) {
+            if (index % 2 == 0) {
+                console.log(index);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
